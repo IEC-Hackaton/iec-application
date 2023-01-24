@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
+import 'core/models/user.dart';
 import 'pages/splash_screen.dart';
 
-void main() {
+Future<void> main() async {
+  await Hive.initFlutter();
+  Hive.registerAdapter(UserAdapter());
   runApp(LoginUiApp());
 }
 
 class LoginUiApp extends StatelessWidget {
-
-  Color _primaryColor = HexColor('#DC54FE');
-  Color _accentColor = HexColor('#8A02AE');
+  Color _primaryColor = HexColor('#87CEEB');
+  Color _accentColor = HexColor('#87CEEB');
 
   // Design color
   // Color _primaryColor= HexColor('#FFC867');
@@ -28,16 +31,14 @@ class LoginUiApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Login UI',
+      title: 'IEC APP',
       theme: ThemeData(
         primaryColor: _primaryColor,
         accentColor: _accentColor,
         scaffoldBackgroundColor: Colors.grey.shade100,
         primarySwatch: Colors.grey,
       ),
-      home: SplashScreen(title: 'Flutter Login UI'),
+      home: SplashScreen(title: 'IEC'),
     );
   }
 }
-
-
