@@ -39,6 +39,7 @@ dependencies:
   flutter_secure_storage: ^7.0.1
   toast: ^0.3.0
   hive: ^2.2.3
+  persistent_bottom_nav_bar: ^5.0.2
 
 dev_dependencies:
   flutter_test:

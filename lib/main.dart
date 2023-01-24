@@ -36,7 +36,7 @@ class LoginUiApp extends StatelessWidget {
         primaryColor: _primaryColor,
         accentColor: _accentColor,
         scaffoldBackgroundColor: Colors.grey.shade100,
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.blueGrey,
       ),
       home: SplashScreen(title: 'IEC'),
     );
