@@ -1,5 +1,3 @@
-import 'package:dartz/dartz_unsafe.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login_ui/common/theme_helper.dart';
@@ -8,8 +6,8 @@ import 'package:toast/toast.dart';
 
 import 'base_screen.dart';
 import 'forgot_password_page.dart';
-import 'profile_page.dart';
-import 'registration_page.dart';
+import 'profile_screen.dart';
+import 'signup_screen.dart';
 import 'widgets/header_widget.dart';
 
 class LoginPage extends StatefulWidget {

@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
-import 'profile_page.dart';
+import 'profile_screen.dart';
+import 'registration_screen.dart';
 import 'widgets/header_widget.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -134,7 +135,15 @@ class _BaseScreenState extends State<BaseScreen> {
                 leading: Icon(Icons.app_registration),
                 trailing: Icon(Icons.arrow_forward_ios),
                 selected: true,
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RegistrationScreen(),
+                  ),
+                ),
               ),
+              SizedBox(height: 5),
+              Divider(),
               ListTile(
                 title: Text(
                   'Candidacy',
@@ -148,6 +157,8 @@ class _BaseScreenState extends State<BaseScreen> {
                 trailing: Icon(Icons.arrow_forward_ios),
                 selected: true,
               ),
+              SizedBox(height: 5),
+              Divider(),
               ListTile(
                 title: Text(
                   'Voters Transfer',
@@ -160,7 +171,8 @@ class _BaseScreenState extends State<BaseScreen> {
                 leading: Icon(Icons.assistant_navigation),
                 trailing: Icon(Icons.arrow_forward_ios),
                 selected: true,
-              )
+              ),
+              Divider(),
             ]),
           )
         ],
@@ -169,19 +181,19 @@ class _BaseScreenState extends State<BaseScreen> {
   }
 
   List<Widget> _buildScreens() {
-    return [_homeContent(), ProfilePage()];
+    return [_homeContent(), ProfileScreen()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.home),
+        icon: Icon(Icons.home),
         title: ("Home"),
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.person),
+        icon: Icon(Icons.person_outline_sharp),
         title: ("Profile"),
         activeColorPrimary: CupertinoColors.activeBlue,
         inactiveColorPrimary: CupertinoColors.systemGrey,

@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_login_ui/common/theme_helper.dart';
 import 'package:flutter_login_ui/core/models/user.dart';
@@ -9,8 +7,8 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:toast/toast.dart';
 
-import 'login_page.dart';
-import 'profile_page.dart';
+import 'login_screen.dart';
+import 'profile_screen.dart';
 
 class RegistrationPage extends StatefulWidget {
   @override
